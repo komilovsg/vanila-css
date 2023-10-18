@@ -2,60 +2,88 @@ body {
   line-height: 1.5;
   font-family: sans-serif;
   font-size: clamp(1.125rem, 2vm, 1.25rem);
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-bottom: 100px;
+}
 
+@media screen and (min-width: 840px) {
+  body {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+.fav {
+  border-radius: 9999px;
 }
 h1 {
   font-size: 2rem;
-  margin: 40rem 0rem;
+  margin-top: 20rem;
+  margin-bottom: 40rem;
   text-align: center;
 }
 p,
-ul{
-    animation: fade linear both;
-    animation-timeline: view();
-    animation-range: entry 50% cover 50%;
-    
+ul {
+  animation: fade linear both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+}
+img {
+  animation: fades linear both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+  margin: 5rem 0rem 0rem 0rem;
 }
 
-h2{
-    background: linear-gradient(90deg, black, transparent);
-    background-size: 200%;
-    animation: reveal both linear;
-    animation-timeline: view();
-    background-repeat: no-repeat;
-    animation-range: entry 50% cover 50%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+h2 {
+  background: linear-gradient(90deg, black, transparent);
+  background-size: 200%;
+  animation: reveal both linear;
+  animation-timeline: view();
+  background-repeat: no-repeat;
+  animation-range: entry 50% cover 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-
-img{
-    width: 850px;
-    margin-left: 20%;
+img {
+  width: 850px;
+  margin-left: 20%;
+  border-radius: 20px;
+}
+figcaption {
+  margin-left: 22%;
 }
 
 @keyframes fade {
-    from{
-        opacity: 0;
-        
-    }
-    to{
-        opacity: 1;
-
-    }
-    0%{
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes fades {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transition: all;
+  }
+  0% {
+    opacity: 0;
+  }
 }
 
-@keyframes reveal{
-    from{
-        background-position-x: 200%;
-    }
-    to{
-        background-position-x: 0%;
-    }
+@keyframes reveal {
+  from {
+    background-position-x: 200%;
+  }
+  to {
+    background-position-x: 0%;
+  }
 }
