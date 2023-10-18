@@ -2,7 +2,11 @@ body {
   line-height: 1.5;
   font-family: sans-serif;
   font-size: clamp(1.125rem, 2vm, 1.25rem);
-  margin-bottom: 100px;
+  margin-bottom: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 840px) {
@@ -22,7 +26,8 @@ h1 {
   text-align: center;
 }
 p,
-ul {
+ul,
+figcaption {
   animation: fade linear both;
   animation-timeline: view();
   animation-range: entry 50% cover 50%;
@@ -47,12 +52,8 @@ h2 {
 }
 
 img {
-  width: 850px;
-  margin-left: 20%;
+  width: 100%;
   border-radius: 20px;
-}
-figcaption {
-  margin-left: 22%;
 }
 
 @keyframes fade {
